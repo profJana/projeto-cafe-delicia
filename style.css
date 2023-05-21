@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    background-color: #552823;
 }
 
 header{
@@ -69,8 +70,11 @@ a:hover{
     width: 200px;
 }
 
-#modalCapuccino{
+#modalCapuccino, #modalTorta, #modalSalgados, #modalMilkshakes{
     display: none;
+    max-width: 900px;
+    height: 500px;
+    overflow-y: auto;
 }
 
 .modalitemsCardapio{
@@ -78,9 +82,126 @@ a:hover{
     z-index: 999;
     color: black;
     background-color: bisque;
-    width: 50%;
-    height: 500px;
     padding: 40px;
+    border-radius: 15px;
+}
+
+.modal-content-items{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.modal-content-items img{
+    margin-right: 15px;
+}
+.conteudo-flex{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close, .closeTortas, .closeSalgados, .closeMilkshake{
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #8b463e;
+    color: white;
+    padding: 0 15px;
+    border-radius: 80px;
+}
+
+.modal-content-topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloCardapio{
+    color: #8b463e;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#contatoFooter{
+    width: 100%;
+    height: 350px;
+    background-color: #8b463e;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
+
+
+/*Resolução geral celulares*/
+@media only screen and (max-width: 415px){
+    .logoFooter img{
+        width: 150px;
+    }
+
+    #contatoFooter{
+        height: 550px;
+        padding: 0;
+        margin:0;
+    }
+
+    #contatos{
+        padding: 15px;
+    }
+
+    #mapa iframe{
+        width: 420px;
+        height: 250px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .carousel, .carousel-inner{
+        height: 300px;
+    }
+    #sectionCardapio{
+        height: 100%;
+    }
+
+    #contatos img{
+        width: 50px;
+    }
+
+    #contatos a{
+        font-size: 14px;
+    }
+
+    #modalCapuccino, #modalTorta, #modalSalgados, #modalMilkshakes{
+        max-width: 400px;
+    }
+
+    #sectionCardapio{
+        position: relative;
+    }
+
+    #modalCapuccino{
+        position: absolute;
+        top: 10px;
+    }
+    #modalTorta{
+        position: absolute;
+        top: 100px;
+    }
+    #modalSalgados{
+        position: absolute;
+        top: 500px;
+    }
+    #modalMilkshakes{
+        position: absolute;
+        top: 600px;
+    }
+    #openMilkshake{
+        padding-bottom: 100px;
+    }
+
+
+}
